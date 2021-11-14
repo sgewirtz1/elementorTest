@@ -1,0 +1,8 @@
+SQL Question:
+SELECT employee_id, MAX(salary) FROM employees GROUP BY department_id
+would give the highest salaried employee per group with identifier but not the second for comparison
+
+SELECT employee_id, salary FROM employees ORDER BY department_id, salary
+should give the id and salary of employees ordered by dept then salary,
+need to get the first and second value from each group to compare
+
