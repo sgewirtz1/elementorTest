@@ -1,0 +1,4 @@
+I'm here currently standing up the script, reading in the list of URLs and iteritively reading if they're stale or unsaved.
+I could do this operation as a lambda job kicked off by cron, possibly updating the records in batches if there's a larger
+number of them. I would likely try to avoid doing everything at once and instead bin the urls into bins such that there's a
+roughly equal amount for requerying 1 group every second of our 15 minute staleness window (15*60 being the number of bins)
