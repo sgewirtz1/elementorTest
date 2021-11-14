@@ -1,6 +1,7 @@
 import requests
 from requests.api import head
 from datetime import datetime, timedelta
+import sqlite3
 
 # read in the request1.csv file line by line
 # for each line (URL) 
@@ -22,6 +23,8 @@ url_ids = dict()
 url_ratings = dict()
 url_results = dict()
 url_last_updated_time = dict()
+
+# db_connection = sqlite3.connect(r"python_workspace/elementorTest/urls.db")
 
 with open("python_workspace/elementorTest/request1.csv") as url_source_file:
     for line in url_source_file:
